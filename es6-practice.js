@@ -17,3 +17,17 @@ console.log(arrFunctionTwo(1,2));
 const arrFunctionThree = (num1, num2, num3) => num1 * num2 * num3;
 console.log(arrFunctionThree(1,2,3));
 
+// এইবার দুইটা প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন নিবে। ওই arrow ফাংশনটা হবে অনেকগুলা লাইনের। সেখানে প্রত্যেকটা ইনপুট প্যারামিটার এর সাথে ২ যোগ করবে তারপর যোগফল দুইটা গুণ করবে।
+const multiLineArrowFunction = (num1, num2) =>{
+    num1 += 2;
+    num2 += 2;
+    return num1 * num2;
+}
+console.log(multiLineArrowFunction(1,2));
+
+// অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৫ দিয়ে গুন্ করে গুনফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে। 
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const newArr = arr.map(num => num * 5);
+console.log(newArr);

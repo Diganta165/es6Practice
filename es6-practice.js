@@ -26,8 +26,35 @@ const multiLineArrowFunction = (num1, num2) =>{
 console.log(multiLineArrowFunction(1,2));
 
 // অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৫ দিয়ে গুন্ করে গুনফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে। 
-
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const newArr = arr.map(num => num * 5);
 console.log(newArr);
+
+
+// অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো
+const newArray = arr.filter(num => num%2 );
+console.log(newArray);
+
+// একটা array এর মধ্যে অনেকগুলা অবজেক্ট আছে। সেখানে যেই অবজেক্ট এর price আছে ৫০০০ টেক্কা সেই অবজেক্টকে find দিয়ে বের করো। 
+const arrObj = [{
+    "Product" : 'Mobile',
+    "Price" : 5000
+},
+{
+    "Product" : 'Earphone',
+    "Price" : 500
+},
+{
+    "Product" : 'Casing',
+    "Price" : 4000
+},
+{
+    "Product" : 'Charger',
+    "Price" : 5000
+}
+
+]
+
+const findPrice = arrObj.find( tk => tk.Price === 5000);
+console.log(findPrice);

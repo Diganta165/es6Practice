@@ -58,3 +58,30 @@ const arrObj = [{
 
 const findPrice = arrObj.find( tk => tk.Price === 5000);
 console.log(findPrice);
+
+// সিম্পল একটা জাভাস্ক্রিপ্ট অবজেক্ট এর কোন একটা প্রোপার্টিকে ভেরিয়েবল হিসেবে ডিক্লেয়ার করার জন্য destructuring ইউজ করো। 
+let {Price} = arrObj[0];
+console.log(Price);
+
+// array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর থার্ড পজিশন এর উপাদান কে destructuring করে 'three' নামক একটা ভেরিয়েবল এ রাখবে। 
+let [one, two, three] = arr;
+console.log(three);
+
+// অবজেক্ট এ ডট এর আগে যে প্রশ্নবোধক চিহ্ন দিয়ে যে অপশনাল চেইনিং করা যায়। সেটা একটু প্রাকটিস করো। 
+const newObject = {
+    section1:{
+        students: 100,
+        subject: 'Math'
+    },
+    section2:{
+        students: 120,
+        subject: 'English'
+    },
+    section3:{
+        students: 420,
+        subject: 'Programming'
+    }
+
+};
+
+console.log(newObject ?.section3 ?.students);
